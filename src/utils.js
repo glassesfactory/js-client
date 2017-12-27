@@ -1,8 +1,8 @@
-var Base64 = require('Base64');
+var Base64 = require('base-64');
 
 // See http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html
 function btoa(s) {
-  return Base64.btoa(unescape(encodeURIComponent(s)));
+  return Base64.encode(unescape(encodeURIComponent(s)));
 }
 
 function base64URLEncode(s) {
